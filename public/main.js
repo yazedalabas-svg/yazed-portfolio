@@ -214,15 +214,24 @@ function start() {
   resize();
   addEventListener('resize', resize);
 
-  // Scroll mapping: each section maps to one station on the z axis
-  let target = 0, current = 0;
+  // Scroll mapping: piecewise by real section positions, so uneven section heights stay aligned with their object
+  let target = 0, current = 0, tops = [];
+  function measure() { tops = stations.map((s) => s.offsetTop); }
   function readScroll() {
     const max = document.documentElement.scrollHeight - innerHeight;
-    target = max > 0 ? scrollY / max : 0;
-    $('#progressBar').style.transform = `scaleX(${target})`;
+    const y = scrollY;
+    let f = stations.length - 1;
+    for (let i = 0; i < tops.length - 1; i++) {
+      if (y < tops[i + 1]) { f = i + Math.max(0, (y - tops[i]) / (tops[i + 1] - tops[i])); break; }
+    }
+    if (max > 0 && y >= max - 2) f = stations.length - 1;
+    target = f / (stations.length - 1);
+    $('#progressBar').style.transform = `scaleX(${max > 0 ? Math.min(1, y / max) : 0})`;
   }
+  measure(); readScroll();
   addEventListener('scroll', readScroll, { passive: true });
-  readScroll();
+  addEventListener('resize', () => { measure(); readScroll(); });
+  addEventListener('load', () => { measure(); readScroll(); });
 
   // Mouse parallax
   const mouse = { x: 0, y: 0, sx: 0, sy: 0 };

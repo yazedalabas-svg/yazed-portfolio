@@ -172,14 +172,31 @@ h2 { font-size: clamp(1.9rem, 1rem + 3vw, 3.4rem); }
     opacity: 0; visibility: hidden; transition: opacity .3s, visibility .3s;
   }
   nav.open { opacity: 1; visibility: visible; }
-  .station { align-items: flex-end; padding-block-end: 5rem; }
-  .side-start, .side-end { justify-content: flex-start; }
-  .copy {
-    padding: 1.2rem; border-radius: var(--radius);
-    background: rgb(5 6 10 / .55); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
-    border: 1px solid var(--border);
+  /* 3D object lives in the top half; text sits in the bottom half on a soft gradient (no boxed panel) */
+  .station { align-items: flex-end; padding: 0; min-height: 100svh; }
+  .side-start, .side-end, .center { justify-content: stretch; }
+  .copy, .copy.wide {
+    width: 100%; max-width: none;
+    padding: 5rem var(--gutter) 2rem;
+    background: linear-gradient(to top, rgb(5 6 10 / .96) 55%, rgb(5 6 10 / .75) 80%, transparent);
   }
-  .work, .center { align-items: center; }
+  h1 { font-size: clamp(2rem, 9vw, 2.6rem); }
+  h2 { font-size: clamp(1.7rem, 7.5vw, 2.2rem); }
+  .lead { font-size: .98rem; margin-block-end: 1.2rem; }
+  .actions .btn { flex: 1 1 140px; }
+  .proof { margin-block-start: 1.4rem; gap: 1.4rem; }
+  .proof b { font-size: 1.5rem; }
+  .scroll-hint { display: none; }
+  .center { text-align: start; }
+  .center .lead { margin-inline: 0; }
+  .center-actions { justify-content: flex-start; }
+  .work { padding-block-start: 38svh; }
+  .work .copy { padding-block-start: 1.2rem; }
+  .cards { grid-template-columns: 1fr 1fr; gap: .8rem; margin-block-start: 1.2rem; }
+  .card { padding: .6rem; }
+  .card .thumb { font-size: 1.4rem; margin-block-end: .6rem; }
+  .card h3 { font-size: .9rem; }
+  .card p { display: none; }
 }
 
 @media (hover: none) { .card { transform: none; } }
