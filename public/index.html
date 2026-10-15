@@ -1,126 +1,117 @@
 <!doctype html>
-<html lang="ar" dir="rtl">
+<html lang="ar" dir="rtl" data-tone="light">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>يزيد | صانع محتوى ثلاثي الأبعاد</title>
-  <meta name="description" content="بورتفوليو تفاعلي ثلاثي الأبعاد: ألعاب Roblox، مونتاج فيديو، موشن جرافيك وتصميم 3D.">
-  <meta name="theme-color" content="#05060a">
-  <meta property="og:title" content="يزيد | صانع محتوى ثلاثي الأبعاد">
-  <meta property="og:description" content="بورتفوليو تفاعلي ثلاثي الأبعاد.">
+  <title>يزيد | عوالم ثلاثية الأبعاد</title>
+  <meta name="description" content="استوديو مستقل لتصميم الألعاب والموشن جرافيك والمواقع ثلاثية الأبعاد.">
+  <meta name="theme-color" content="#f4f0e8">
+  <meta property="og:title" content="يزيد | عوالم ثلاثية الأبعاد">
+  <meta property="og:description" content="استوديو مستقل لتصميم الألعاب والموشن جرافيك والمواقع ثلاثية الأبعاد.">
   <meta property="og:type" content="website">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 2l12 7v14l-12 7L4 23V9z' fill='%234de1ff'/%3E%3C/svg%3E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='12' fill='%231c1917'/%3E%3Ccircle cx='22' cy='10' r='4' fill='%23b37a43'/%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=2">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600&family=Noto+Naskh+Arabic:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=5">
 </head>
 <body>
   <a class="skip" href="#main">تخطي إلى المحتوى</a>
 
-  <div class="loader" id="loader" role="status" aria-live="polite"><span>جاري التحميل</span></div>
+  <div class="loader" id="loader" role="status" aria-label="جاري التحميل"><span>YAZED</span></div>
 
   <canvas id="scene" aria-hidden="true"></canvas>
-  <div class="vignette" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
   <div class="progress" aria-hidden="true"><i id="progressBar"></i></div>
 
   <header class="site-header">
-    <a class="logo" href="#hero" aria-label="الصفحة الرئيسية"><i></i><b>YAZED</b></a>
+    <a class="logo" href="#hero" aria-label="الصفحة الرئيسية">Yazed<sup>®</sup></a>
     <nav aria-label="القائمة الرئيسية" id="nav">
       <a href="#games">ألعاب</a>
       <a href="#video">فيديو</a>
-      <a href="#three-d">3D</a>
+      <a href="#three-d">ثلاثي الأبعاد</a>
       <a href="#work">الأعمال</a>
-      <a class="btn btn-sm" href="#contact">تواصل معي</a>
+      <a class="nav-cta" href="#contact">تواصل معي</a>
     </nav>
     <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav" aria-label="القائمة"><span></span><span></span></button>
   </header>
 
   <main id="main">
-    <section class="station side-start" id="hero" data-accent="#4de1ff">
+    <section class="station side-start" id="hero" data-bg="#f4f0e8" data-tone="light">
       <div class="copy">
-        <p class="eyebrow">Creative Developer &amp; 3D Artist</p>
-        <h1>أحوّل الأفكار إلى <em>عوالم</em> ثلاثية الأبعاد</h1>
-        <p class="lead">ألعاب Roblox، مونتاج سينمائي، موشن جرافيك ومواقع تفاعلية. كل مشروع يُبنى ليُبهر ويشتغل بسلاسة على أي جهاز.</p>
+        <p class="eyebrow">مطوّر إبداعي وفنان ثلاثي الأبعاد</p>
+        <h1>عوالم ثلاثية الأبعاد،<br>بتفاصيل <em>تليق بها</em>.</h1>
+        <p class="lead">ألعاب Roblox، مونتاج سينمائي، وموشن جرافيك ومواقع تفاعلية. أعمال هادئة في مظهرها، دقيقة في صنعتها.</p>
         <div class="actions">
           <a class="btn" href="#work">شاهد الأعمال</a>
-          <a class="btn btn-ghost" href="#contact">ابدأ مشروعك</a>
+          <a class="link" href="#contact">ابدأ مشروعك <span aria-hidden="true">←</span></a>
         </div>
-        <ul class="proof" aria-label="أرقام">
-          <li><b data-count="40">0</b><span>مشروع منجز</span></li>
-          <li><b data-count="5">0</b><span>سنوات خبرة</span></li>
-          <li><b data-count="12">0</b><span>عميل سعيد</span></li>
-        </ul>
       </div>
-      <a class="scroll-hint" href="#games" aria-label="انزل لأسفل"><span></span></a>
+      <ul class="meta" aria-label="مجالات العمل">
+        <li><span>01</span>ألعاب</li>
+        <li><span>02</span>موشن</li>
+        <li><span>03</span>ثلاثي الأبعاد</li>
+      </ul>
     </section>
 
-    <section class="station side-end" id="games" data-accent="#8b5cf6">
+    <section class="station side-end" id="games" data-bg="#ece6da" data-tone="light">
       <div class="copy">
-        <p class="eyebrow">01 / ألعاب</p>
+        <p class="eyebrow"><span>01</span> ألعاب</p>
         <h2>ألعاب Roblox بحس سينمائي</h2>
-        <p class="lead">أنظمة قتال، واجهات، كاتسينز وفنشرز بأسلوب أنمي، مع كود نظيف وآمن ضد الاستغلال.</p>
-        <ul class="chips"><li>Luau</li><li>أنظمة قتال</li><li>كاتسين</li><li>UI/UX</li></ul>
+        <p class="lead">أنظمة قتال وواجهات وكاتسينز بأسلوب أنمي، مبنية بكود نظيف ومحمي من الاستغلال.</p>
+        <ul class="tags"><li>Luau</li><li>أنظمة قتال</li><li>كاتسين</li><li>واجهات</li></ul>
       </div>
     </section>
 
-    <section class="station side-start" id="video" data-accent="#ff7a45">
+    <section class="station side-start" id="video" data-bg="#f0e4d9" data-tone="light">
       <div class="copy">
-        <p class="eyebrow">02 / فيديو</p>
+        <p class="eyebrow"><span>02</span> فيديو</p>
         <h2>مونتاج وموشن جرافيك</h2>
-        <p class="lead">ريلز عربية بكابشنز متزامنة، إعلانات، ومشاهد After Effects بإيقاع يمسك المشاهد من أول ثانية.</p>
-        <ul class="chips"><li>After Effects</li><li>مونتاج</li><li>كابشنز</li><li>إعلانات</li></ul>
+        <p class="lead">ريلز عربية بكابشنز متزامنة، وإعلانات ومشاهد After Effects بإيقاع يمسك المشاهد من أول ثانية.</p>
+        <ul class="tags"><li>After Effects</li><li>مونتاج</li><li>كابشنز</li><li>إعلانات</li></ul>
       </div>
     </section>
 
-    <section class="station side-end" id="three-d" data-accent="#3dffb0">
+    <section class="station side-end" id="three-d" data-bg="#e6e8dd" data-tone="light">
       <div class="copy">
-        <p class="eyebrow">03 / ثلاثي الأبعاد</p>
+        <p class="eyebrow"><span>03</span> ثلاثي الأبعاد</p>
         <h2>نماذج وأنيميشن بـ Blender</h2>
-        <p class="lead">شخصيات R6، حركات قتال، وكاميرات تُحوَّل مباشرة إلى بيانات تشتغل داخل اللعبة بدون مشاكل الاستيراد.</p>
-        <ul class="chips"><li>Blender</li><li>Rigging</li><li>Animation</li><li>Three.js</li></ul>
+        <p class="lead">شخصيات R6 وحركات قتال وكاميرات تتحول مباشرة إلى بيانات تعمل داخل اللعبة بلا مشاكل استيراد.</p>
+        <ul class="tags"><li>Blender</li><li>Rigging</li><li>Animation</li><li>Three.js</li></ul>
       </div>
     </section>
 
-    <section class="station work" id="work" data-accent="#ff4d9d">
+    <section class="station work" id="work" data-bg="#f4f0e8" data-tone="light">
       <div class="copy wide">
-        <p class="eyebrow">04 / الأعمال</p>
+        <p class="eyebrow"><span>04</span> الأعمال</p>
         <h2>مشاريع مختارة</h2>
         <div class="cards">
-          <article class="card" tabindex="0" style="--g1:#4de1ff;--g2:#2b3cff">
-            <div class="thumb"><span>01</span></div>
-            <h3>فنشر أنمي لـ Roblox</h3>
-            <p>كاتسين كامل مع كاميرا وتأثيرات وأصوات.</p>
-          </article>
-          <article class="card" tabindex="0" style="--g1:#ff7a45;--g2:#ff2e63">
-            <div class="thumb"><span>02</span></div>
-            <h3>ريلز عربية احترافية</h3>
-            <p>اقتطاع ذكي وكابشنز متزامنة.</p>
-          </article>
-          <article class="card" tabindex="0" style="--g1:#3dffb0;--g2:#00a3ff">
-            <div class="thumb"><span>03</span></div>
-            <h3>إعلان موشن جرافيك</h3>
-            <p>حركة نظيفة وهوية بصرية متناسقة.</p>
-          </article>
-          <article class="card" tabindex="0" style="--g1:#8b5cf6;--g2:#ff4d9d">
-            <div class="thumb"><span>04</span></div>
-            <h3>موقع 3D تفاعلي</h3>
-            <p>تجربة سكرول سينمائية بأداء عالٍ.</p>
-          </article>
+          <a class="card" href="#contact" style="--tile:#d9cdb9">
+            <div class="thumb"><b>01</b></div>
+            <div class="cap"><h3>فنشر أنمي لـ Roblox</h3><span>2025</span></div>
+          </a>
+          <a class="card" href="#contact" style="--tile:#d6bfae">
+            <div class="thumb"><b>02</b></div>
+            <div class="cap"><h3>ريلز عربية احترافية</h3><span>2025</span></div>
+          </a>
+          <a class="card" href="#contact" style="--tile:#c4cab8">
+            <div class="thumb"><b>03</b></div>
+            <div class="cap"><h3>إعلان موشن جرافيك</h3><span>2024</span></div>
+          </a>
+          <a class="card" href="#contact" style="--tile:#cfc4d3">
+            <div class="thumb"><b>04</b></div>
+            <div class="cap"><h3>موقع 3D تفاعلي</h3><span>2024</span></div>
+          </a>
         </div>
       </div>
     </section>
 
-    <section class="station center" id="contact" data-accent="#4de1ff">
+    <section class="station side-start contact" id="contact" data-bg="#1c1917" data-tone="dark">
       <div class="copy">
-        <p class="eyebrow">05 / تواصل</p>
-        <h2>عندك فكرة؟ خلنا نبنيها</h2>
-        <p class="lead">أرسل لي نبذة عن مشروعك وأرد عليك خلال 24 ساعة.</p>
-        <div class="actions center-actions">
-          <a class="btn" href="mailto:name@example.com">name@example.com</a>
-          <a class="btn btn-ghost" href="#hero">العودة للأعلى</a>
-        </div>
-        <p class="foot">© <span id="year"></span> YAZED. جميع الحقوق محفوظة.</p>
+        <p class="eyebrow"><span>05</span> تواصل</p>
+        <h2>عندك فكرة؟<br>خلنا نبنيها معاً.</h2>
+        <a class="mail" href="mailto:name@example.com">name@example.com</a>
+        <p class="foot">© <span id="year"></span> Yazed. جميع الحقوق محفوظة.</p>
       </div>
     </section>
   </main>
@@ -135,6 +126,6 @@
         "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
     } }
   </script>
-  <script type="module" src="main.js?v=2"></script>
+  <script type="module" src="main.js?v=5"></script>
 </body>
 </html>
